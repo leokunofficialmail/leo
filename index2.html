@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS攻略キャンプ - 公式サイト</title>
+    <!-- Interフォントを読み込み -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Tailwind CSSをCDNで読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* デフォルトフォントをInterに設定 */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-100;
+        }
+
+        /* カスタムスクロールバーのスタイル */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4b5563;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ヘッダーセクション -->
+    <header class="bg-gray-800 bg-opacity-70 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- ロゴ -->
+            <a href="#" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                SNS攻略キャンプ
+            </a>
+            <!-- ナビゲーションメニュー (モバイルでは非表示) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-100 hover:text-white transition-colors duration-300">選ばれる理由</a>
+                <a href="#services" class="text-gray-100 hover:text-white transition-colors duration-300">サービス内容</a>
+                <a href="#achievements" class="text-gray-100 hover:text-white transition-colors duration-300">過去の実績</a>
+                <a href="#contact" class="text-gray-100 hover:text-white transition-colors duration-300">ご相談はこちらから</a>
+            </nav>
+            <!-- モバイル用メニューボタン -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-100 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90 py-4 text-center">
+            <a href="#about" class="block py-2 text-gray-100 hover:text-white transition-colors">選ばれる理由</a>
+            <a href="#services" class="block py-2 text-gray-100 hover:text-white transition-colors">サービス内容</a>
+            <a href="#achievements" class="block py-2 text-gray-100 hover:text-white transition-colors">過去の実績</a>
+            <a href="#contact" class="block py-2 text-gray-100 hover:text-white transition-colors">ご相談はこちらから</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="relative min-h-screen flex items-center justify-center text-center p-4">
+            <!-- 背景のグラデーションオーバーレイ -->
+            <div class="absolute inset-0 z-0 bg-gradient-to-br from-gray-900 to-slate-950 opacity-95"></div>
+            <!-- 背景の抽象的な図形 -->
+            <div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute top-1/4 left-1/4 w-48 h-48 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+                <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-56 h-56 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 text-white leading-tight animate-fade-in-up whitespace-nowrap">
+                    あなたのSNSを
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">次のレベルへ</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-100 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
+                    SNS攻略キャンプは、個人から企業まで、SNSや動画制作のコツ、<br>エンゲージメントを高めるための実践的な戦略とノウハウを提供します。
+                </p>
+                <a href="#contact" class="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out animate-fade-in-up animation-delay-1000">
+                    今すぐ相談する
+                </a>
+            </div>
+        </section>
+
+        <!-- 選ばれる理由セクション -->
+        <section id="about" class="py-16 md:py-24 p-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-yellow-500">選ばれる<span class="text-purple-400">3つの理由</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 理由1 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-purple-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L12 21M9.75 17h-2.25a2.25 2.25 0 01-2.25-2.25V7.5M9.75 17v-2.25M14.25 17L12 21m2.25-4h2.25a2.25 2.25 0 002.25-2.25V7.5m-4.5 9.75v-2.25M12 21v-2.25M15.75 17v-2.25M4.5 7.5a2.25 2.25 0 012.25-2.25h12A2.25 2.25 0 0119.5 7.5v10.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 18V7.5z"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">収益化に成功</h3>
+                        <p class="text-gray-100 text-center">
+                            フォロワーを増やすための具体的な戦略、コンテンツ作成、分析方法を惜しみなく提供します。机上の空論ではない、現場で使える知識が手に入ります。
+                        </p>
+                    </div>
+                    <!-- 理由2 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-pink-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 5.343A10.05 10.05 0 0012 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10a10.05 10.05 0 00-4.343-8.657z"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">最新<br>トレンド対応</h3>
+                        <p class="text-gray-100 text-center">
+                            アルゴリズムの変更や新しい機能にいち早く対応。常に最新のSNSマーケティングトレンドに基づいたサポートを提供します。
+                        </p>
+                    </div>
+                    <!-- 理由3 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-teal-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">個別<br>コンサルティング</h3>
+                        <p class="text-gray-100 text-center">
+                            お客様一人ひとりの目標や現状に合わせて、最適な戦略を提案します。画一的なプランではなく、あなただけの攻略法を見つけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス内容セクション -->
+        <section id="services" class="py-16 md:py-24 p-4 bg-gray-950">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-yellow-500">提供する<span class="text-teal-400">サービス</span></h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- サービス1 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">アカウント診断</h3>
+                        <p class="text-gray-100">現在のSNSアカウントを詳細に分析し、成長を妨げている要因を特定します。</p>
+                    </div>
+                    <!-- サービス2 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">戦略立案</h3>
+                        <p class="text-gray-100">目標達成に向けた最適な投稿頻度、コンテンツタイプ、ハッシュタグ戦略を策定します。</p>
+                    </div>
+                    <!-- サービス3 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">コンテンツ作成支援</h3>
+                        <p class="text-gray-100">エンゲージメント率の高い投稿を作成するための具体的なアドバイスとテンプレートを提供します。</p>
+                    </div>
+                    <!-- サービス4 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">広告運用サポート</h3>
+                        <p class="text-gray-100">SNS広告の効果を最大化するためのターゲット設定やクリエイティブの改善を支援します。</p>
+                    </div>
+                    <!-- サービス5 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">データ分析</h3>
+                        <p class="text-gray-100">投稿ごとのパフォーマンスを分析し、次のアクションに繋げるためのレポートを提供します。</p>
+                    </div>
+                    <!-- サービス6 -->
+                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400">英会話サポート</h3>
+                        <p class="text-gray-100">話せるリアルな英会話レッスンを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 過去の実績セクション -->
+        <section id="achievements" class="py-16 md:py-24 p-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-yellow-500">
+                    過去の<span class="text-pink-400">実績</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 実績1: 海外を飛び回るYoutuber -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-pink-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H12v-2.25a2.25 2.25 0 012.25-2.25h.75a2.25 2.25 0 012.25 2.25v.75m-5.25-4.5V11m5.25-4.5H12v-.75A2.25 2.25 0 0014.25 3h-.75a2.25 2.25 0 00-2.25 2.25v.75m-5.25 4.5V11m5.25 4.5H12v.75a2.25 2.25 0 002.25 2.25h.75a2.25 2.25 0 002.25-2.25V15m-5.25 4.5V15m5.25-4.5H12m0-4.5h-.75A2.25 2.25 0 009 5.25V6m0 4.5V11m-2.25 4.5V15m0-4.5h-.75A2.25 2.25 0 004.5 15h.75a2.25 2.25 0 002.25-2.25V12m0-4.5V7.5m-2.25 4.5v-2.25a2.25 2.25 0 012.25-2.25h.75a2.25 2.25 0 012.25 2.25v.75M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">海外Youtuber<br>として活躍</h3>
+                        <p class="text-gray-100 text-center">
+                            収益化を実現し、海外を飛び回りながら活動。自由なライフスタイルを叶えるためのSNS戦略とノウハウを提供します。
+                        </p>
+                    </div>
+                    <!-- 実績2: 営業成績1位 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-teal-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">海外の大手企業で<br>営業成績1位</h3>
+                        <p class="text-gray-100 text-center">
+                            過去にオーストラリアの大手飲料メーカーにて、100人以上のコンサルタントスタッフの中で営業成績1位を獲得。高い分析力と提案力で成果を出しました。
+                        </p>
+                    </div>
+                    <!-- 実績3: 有名芸人のネタ提供 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl text-purple-400 mb-4 text-center">
+                            <span class="inline-block p-4 rounded-full bg-gray-700"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.125a3.75 3.75 0 10-3.75-3.75 3.75 3.75 0 003.75 3.75z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 01-.75-.75V8.25m2.25 0a3.75 3.75 0 10-3.75-3.75 3.75 3.75 0 003.75 3.75zM12 21a9 9 0 100-18 9 9 0 000 18zM12 21v-3.75m0-6V7.5m0-1.5a1.5 1.5 0 011.5-1.5h.75a1.5 1.5 0 011.5 1.5v.75m-3-3a1.5 1.5 0 00-1.5-1.5h-.75a1.5 1.5 0 00-1.5 1.5v.75m3-3a1.5 1.5 0 001.5-1.5h.75a1.5 1.5 0 001.5 1.5v.75m-3-3a1.5 1.5 0 00-1.5-1.5h-.75a1.5 1.5 0 00-1.5 1.5v.75"></path></svg></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-yellow-400">放送作家として<br>バラエティで活躍</h3>
+                        <p class="text-gray-100 text-center">
+                            日本テレビの番組制作に携わり、テレビで活躍する有名芸人にもネタを提供。トレンドを捉え、人を惹きつけるコンテンツを生み出す力があります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォームセクション -->
+        <section id="contact" class="py-16 md:py-24 p-4 bg-gray-950">
+            <div class="container mx-auto max-w-2xl">
+                <h2 class="text-3xl font-bold text-center mb-4 text-yellow-500">
+                    <span class="text-teal-400">ご相談</span>は公式LINEから！
+                </h2>
+                <!-- QRコードコンテナ -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 flex flex-col items-center space-y-4">
+                    <img src="https://qr-official.line.me/gs/M_kbk5114d_GW.png?oat_content=qr" alt="SNS攻略キャンプ公式LINE QRコード" class="w-48 h-48 rounded-md">
+                    <p class="text-gray-100 text-sm">QRコードが読み取れない方はID検索: <span class="font-bold text-yellow-400">@kbk5114d</span></p>
+                    <p class="text-gray-400 text-xs">※「@」マークも含めて検索してください。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッターセクション -->
+    <footer class="bg-gray-900 py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-100 text-sm">&copy; 2024 SNS攻略キャンプ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- スクリプトセクション -->
+    <script>
+        // JavaScriptでフォームの送信とナビゲーションを制御します。
+        document.addEventListener('DOMContentLoaded', () => {
+            // モバイルメニューの開閉処理
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <!--
+    アニメーション用のスタイル（Tailwind CSSのカスタム設定）
+    この部分は通常 tailwind.config.js に記述しますが、
+    自己完結型のため style タグに直接記述します。
+    -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animation-delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        @keyframes blob {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body>
+</html>
